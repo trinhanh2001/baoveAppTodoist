@@ -1,0 +1,30 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="More than limit project" verbose="1" parallel="tests" thread-count="2">
+    <test name="First Test"  >
+        <parameter name="DEVICE_NAME" value="Redmi Note 8 Pro"></parameter>
+        <parameter name="UDID" value="jbh6iv85baztz54x"></parameter>
+        <parameter name="version" value="11.0"></parameter>
+        <classes>
+            <class name="com.trinhthianh.testcases.MyProjectsTest">
+                <methods>
+                    <include name="addNewProject" />
+                </methods>
+            </class>
+
+        </classes>
+    </test>
+
+    <test name="Second test"  >
+        <parameter name="DEVICE_NAME" value="sdk_gphone_x86"></parameter>
+        <parameter name="UDID" value="emulator-5554"></parameter>
+        <parameter name="version" value="9.0"></parameter>
+        <classes>
+            <class name="com.trinhthianh.testcases.MyProjectsTest">
+                <methods>
+                    <include name="addNewProject" />
+                </methods>
+            </class>
+
+        </classes>
+    </test>
+</suite>
